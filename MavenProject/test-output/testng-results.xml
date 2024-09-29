@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-09-29T13:17:39 IST" name="Suite" finished-at="2024-09-29T13:19:14 IST" duration-ms="95143">
+    <groups>
+      <group name="Sanity">
+        <method signature="tc002_MyLogin.verifyMylogin()[pri:0, instance:testCases.tc002_MyLogin@48793bef]" name="verifyMylogin" class="testCases.tc002_MyLogin"/>
+        <method signature="tc002_MyLogin.verifyMylogin()[pri:0, instance:testCases.tc002_MyLogin@4ebff610]" name="verifyMylogin" class="testCases.tc002_MyLogin"/>
+      </group> <!-- Sanity -->
+      <group name="Regression">
+        <method signature="tc001_AccountRegister.verifyAccRegisteration()[pri:0, instance:testCases.tc001_AccountRegister@5965be2d]" name="verifyAccRegisteration" class="testCases.tc001_AccountRegister"/>
+        <method signature="tc001_AccountRegister.verifyAccRegisteration()[pri:0, instance:testCases.tc001_AccountRegister@4241e0f4]" name="verifyAccRegisteration" class="testCases.tc001_AccountRegister"/>
+      </group> <!-- Regression -->
+    </groups>
+    <test started-at="2024-09-29T13:17:39 IST" name="Test" finished-at="2024-09-29T13:18:22 IST" duration-ms="43522">
+      <class name="testCases.tc001_AccountRegister">
+        <test-method is-config="true" signature="openApp(java.lang.String)[pri:0, instance:testCases.tc001_AccountRegister@5965be2d]" started-at="2024-09-29T13:17:39 IST" name="openApp" finished-at="2024-09-29T13:17:59 IST" duration-ms="20063" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openApp -->
+        <test-method signature="verifyAccRegisteration()[pri:0, instance:testCases.tc001_AccountRegister@5965be2d]" started-at="2024-09-29T13:17:59 IST" name="verifyAccRegisteration" finished-at="2024-09-29T13:18:00 IST" duration-ms="1805" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAccRegisteration -->
+      </class> <!-- testCases.tc001_AccountRegister -->
+      <class name="testCases.tc002_MyLogin">
+        <test-method is-config="true" signature="openApp(java.lang.String)[pri:0, instance:testCases.tc002_MyLogin@48793bef]" started-at="2024-09-29T13:18:00 IST" name="openApp" finished-at="2024-09-29T13:18:20 IST" duration-ms="19960" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openApp -->
+        <test-method signature="verifyMylogin()[pri:0, instance:testCases.tc002_MyLogin@48793bef]" started-at="2024-09-29T13:18:20 IST" name="verifyMylogin" finished-at="2024-09-29T13:18:22 IST" duration-ms="1649" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyMylogin -->
+      </class> <!-- testCases.tc002_MyLogin -->
+    </test> <!-- Test -->
+    <test started-at="2024-09-29T13:18:22 IST" name="Test1" finished-at="2024-09-29T13:19:14 IST" duration-ms="51572">
+      <class name="testCases.tc001_AccountRegister">
+        <test-method is-config="true" signature="openApp(java.lang.String)[pri:0, instance:testCases.tc001_AccountRegister@4241e0f4]" started-at="2024-09-29T13:18:22 IST" name="openApp" finished-at="2024-09-29T13:18:43 IST" duration-ms="20870" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openApp -->
+        <test-method signature="verifyAccRegisteration()[pri:0, instance:testCases.tc001_AccountRegister@4241e0f4]" started-at="2024-09-29T13:18:43 IST" name="verifyAccRegisteration" finished-at="2024-09-29T13:18:48 IST" duration-ms="5259" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAccRegisteration -->
+      </class> <!-- testCases.tc001_AccountRegister -->
+      <class name="testCases.tc002_MyLogin">
+        <test-method is-config="true" signature="openApp(java.lang.String)[pri:0, instance:testCases.tc002_MyLogin@4ebff610]" started-at="2024-09-29T13:18:48 IST" name="openApp" finished-at="2024-09-29T13:19:09 IST" duration-ms="20815" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openApp -->
+        <test-method signature="verifyMylogin()[pri:0, instance:testCases.tc002_MyLogin@4ebff610]" started-at="2024-09-29T13:19:09 IST" name="verifyMylogin" finished-at="2024-09-29T13:19:14 IST" duration-ms="4620" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyMylogin -->
+      </class> <!-- testCases.tc002_MyLogin -->
+    </test> <!-- Test1 -->
+  </suite> <!-- Suite -->
+</testng-results>
