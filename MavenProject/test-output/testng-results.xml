@@ -1,38 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-29T13:17:39 IST" name="Suite" finished-at="2024-09-29T13:19:14 IST" duration-ms="95143">
+  <suite started-at="2024-09-30T10:56:44 IST" name="Suite" finished-at="2024-09-30T10:57:19 IST" duration-ms="34801">
     <groups>
       <group name="Sanity">
-        <method signature="tc002_MyLogin.verifyMylogin()[pri:0, instance:testCases.tc002_MyLogin@48793bef]" name="verifyMylogin" class="testCases.tc002_MyLogin"/>
-        <method signature="tc002_MyLogin.verifyMylogin()[pri:0, instance:testCases.tc002_MyLogin@4ebff610]" name="verifyMylogin" class="testCases.tc002_MyLogin"/>
+        <method signature="tc002_MyLogin.verifyMylogin(java.lang.String,java.lang.String)[pri:0, instance:testCases.tc002_MyLogin@573906eb]" name="verifyMylogin" class="testCases.tc002_MyLogin"/>
       </group> <!-- Sanity -->
-      <group name="Regression">
-        <method signature="tc001_AccountRegister.verifyAccRegisteration()[pri:0, instance:testCases.tc001_AccountRegister@5965be2d]" name="verifyAccRegisteration" class="testCases.tc001_AccountRegister"/>
-        <method signature="tc001_AccountRegister.verifyAccRegisteration()[pri:0, instance:testCases.tc001_AccountRegister@4241e0f4]" name="verifyAccRegisteration" class="testCases.tc001_AccountRegister"/>
-      </group> <!-- Regression -->
     </groups>
-    <test started-at="2024-09-29T13:17:39 IST" name="Test" finished-at="2024-09-29T13:18:22 IST" duration-ms="43522">
-      <class name="testCases.tc001_AccountRegister">
-        <test-method is-config="true" signature="openApp(java.lang.String)[pri:0, instance:testCases.tc001_AccountRegister@5965be2d]" started-at="2024-09-29T13:17:39 IST" name="openApp" finished-at="2024-09-29T13:17:59 IST" duration-ms="20063" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openApp -->
-        <test-method signature="verifyAccRegisteration()[pri:0, instance:testCases.tc001_AccountRegister@5965be2d]" started-at="2024-09-29T13:17:59 IST" name="verifyAccRegisteration" finished-at="2024-09-29T13:18:00 IST" duration-ms="1805" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyAccRegisteration -->
-      </class> <!-- testCases.tc001_AccountRegister -->
+    <test started-at="2024-09-30T10:56:44 IST" name="Test" finished-at="2024-09-30T10:57:19 IST" duration-ms="34801">
       <class name="testCases.tc002_MyLogin">
-        <test-method is-config="true" signature="openApp(java.lang.String)[pri:0, instance:testCases.tc002_MyLogin@48793bef]" started-at="2024-09-29T13:18:00 IST" name="openApp" finished-at="2024-09-29T13:18:20 IST" duration-ms="19960" status="PASS">
+        <test-method is-config="true" signature="openApp(java.lang.String)[pri:0, instance:testCases.tc002_MyLogin@573906eb]" started-at="2024-09-30T10:56:44 IST" name="openApp" finished-at="2024-09-30T10:57:06 IST" duration-ms="22263" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -43,47 +21,82 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openApp -->
-        <test-method signature="verifyMylogin()[pri:0, instance:testCases.tc002_MyLogin@48793bef]" started-at="2024-09-29T13:18:20 IST" name="verifyMylogin" finished-at="2024-09-29T13:18:22 IST" duration-ms="1649" status="PASS">
+        <test-method signature="verifyMylogin(java.lang.String,java.lang.String)[pri:0, instance:testCases.tc002_MyLogin@573906eb]" started-at="2024-09-30T10:57:06 IST" name="verifyMylogin" data-provider="loginData" finished-at="2024-09-30T10:57:18 IST" duration-ms="11394" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Admin123]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1067)
+at org.testng.Assert.assertEquals(Assert.java:1031)
+at org.testng.Assert.assertEquals(Assert.java:1077)
+at testCases.tc002_MyLogin.verifyMylogin(tc002_MyLogin.java:42)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyMylogin -->
+        <test-method signature="verifyMylogin(java.lang.String,java.lang.String)[pri:0, instance:testCases.tc002_MyLogin@573906eb]" started-at="2024-09-30T10:57:18 IST" name="verifyMylogin" data-provider="loginData" finished-at="2024-09-30T10:57:19 IST" duration-ms="1098" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[sfffsf@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Cn@hqTVnMJcht8]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyMylogin -->
       </class> <!-- testCases.tc002_MyLogin -->
     </test> <!-- Test -->
-    <test started-at="2024-09-29T13:18:22 IST" name="Test1" finished-at="2024-09-29T13:19:14 IST" duration-ms="51572">
-      <class name="testCases.tc001_AccountRegister">
-        <test-method is-config="true" signature="openApp(java.lang.String)[pri:0, instance:testCases.tc001_AccountRegister@4241e0f4]" started-at="2024-09-29T13:18:22 IST" name="openApp" finished-at="2024-09-29T13:18:43 IST" duration-ms="20870" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[edge]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openApp -->
-        <test-method signature="verifyAccRegisteration()[pri:0, instance:testCases.tc001_AccountRegister@4241e0f4]" started-at="2024-09-29T13:18:43 IST" name="verifyAccRegisteration" finished-at="2024-09-29T13:18:48 IST" duration-ms="5259" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyAccRegisteration -->
-      </class> <!-- testCases.tc001_AccountRegister -->
-      <class name="testCases.tc002_MyLogin">
-        <test-method is-config="true" signature="openApp(java.lang.String)[pri:0, instance:testCases.tc002_MyLogin@4ebff610]" started-at="2024-09-29T13:18:48 IST" name="openApp" finished-at="2024-09-29T13:19:09 IST" duration-ms="20815" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[edge]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openApp -->
-        <test-method signature="verifyMylogin()[pri:0, instance:testCases.tc002_MyLogin@4ebff610]" started-at="2024-09-29T13:19:09 IST" name="verifyMylogin" finished-at="2024-09-29T13:19:14 IST" duration-ms="4620" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyMylogin -->
-      </class> <!-- testCases.tc002_MyLogin -->
-    </test> <!-- Test1 -->
   </suite> <!-- Suite -->
 </testng-results>

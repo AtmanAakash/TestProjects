@@ -1,6 +1,7 @@
 package testCases;
 
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import pageObject.HomePage;
@@ -10,9 +11,20 @@ import testBase.BaseClass;
 
 public class tc002_MyLogin extends BaseClass{
 	
-	@Test (groups = {"Sanity"})
-	public void verifyMylogin()  {
+	
+	
+	@DataProvider(name = "loginData")
+	Object[][] testData() {
+
+		Object getdata[][] = { { "Admin", "Admin123" }, { "sfffsf@gmail.com", "Cn@hqTVnMJcht8" }};
+
+		return getdata;
+	}
+	
+	@Test (groups = {"Sanity"}, dataProvider = "loginData" )
+	public void verifyMylogin(String username, String password)  {
 		
+				
 		try {
 			
 			HomePage hp = new HomePage(driver);
@@ -21,8 +33,8 @@ public class tc002_MyLogin extends BaseClass{
 			
 			MyLoginPage lp =new MyLoginPage(driver);
 			
-			lp.setUseremail(p.getProperty("email"));
-			lp.setUserpass(p.getProperty("password"));
+			lp.setUseremail(username);
+			lp.setUserpass(password);
 			lp.clkLogin();
 			
 			MyAccountPage ap =new MyAccountPage(driver);

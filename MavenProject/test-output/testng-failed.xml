@@ -3,18 +3,13 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <parameter name="browser" value="chrome"/>
-    <groups>
-      <run>
-        <include name="Regression"/>
-      </run>
-    </groups>
     <classes>
-      <class name="testCases.tc001_AccountRegister">
+      <class name="testCases.tc002_MyLogin">
         <methods>
           <include name="openApp"/>
-          <include name="verifyAccRegisteration"/>
+          <include name="verifyMylogin" invocation-numbers="0"/>
         </methods>
-      </class> <!-- testCases.tc001_AccountRegister -->
+      </class> <!-- testCases.tc002_MyLogin -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -10,6 +10,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 
 public class BaseClass {
@@ -38,6 +39,8 @@ public class BaseClass {
 		driver.get(p.getProperty("appUrl"));
 		driver.manage().window().maximize();
 	}
+	
+	
 
 //	@AfterClass
 //	public void closeApp() {
